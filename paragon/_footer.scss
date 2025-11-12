@@ -109,7 +109,7 @@ footer.tutor-container {
     padding: 0 !important;
     #dashboard-content {
         @include media-breakpoint-up(lg) {
-          min-height: calc(100vh - 232px);
+          min-height: calc(100vh - 100px);
         }
     }
     .container-mw-xl.container-fluid {
