@@ -449,6 +449,10 @@ html {
     }
 }
 
+.menu-trigger {
+    display: none!important;
+}
+
 @import "./header";
 @import "./footer";
 @import "./login";
