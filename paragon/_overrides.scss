@@ -452,6 +452,12 @@ html {
 .menu-trigger {
     display: none!important;
 }
+.pgn__tabs {
+    a[data-rb-event-key="/register"],
+    button[data-rb-event-key="/register"] {
+        display: none!important;
+    }
+}
 
 @import "./header";
 @import "./footer";
