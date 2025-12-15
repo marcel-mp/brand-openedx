@@ -397,7 +397,7 @@ html {
     background-color: #B6AEE1 !important;
 }
 
-.pgn__dropdown-menu {
+.menu-content {
     // Hide Profile Link (matches any href containing /u/)
     a[href*="/u/"] {
         display: none!important;
@@ -436,6 +436,22 @@ html {
     }
 }
 
+.menu-content.dropdown-menu {
+    // Hide Profile Link (matches /profile/u/...)
+    a.dropdown-item[href*="/profile/"] {
+        display: none!important;
+    }
+
+    // Hide Account Link (matches /account)
+    a.dropdown-item[href*="/account"] {
+        display: none!important;
+    }
+
+    // Hide Logout Link (matches /logout)
+    a.dropdown-item[href*="/logout"] {
+        display: none!important;
+    }
+}
 
 @import "./header";
 @import "./footer";
