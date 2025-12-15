@@ -392,6 +392,51 @@ html {
         }
     }
 }
+
+.pgn__brand-navbar, .site-header-desktop, .learning-header {
+    background-color: #B6AEE1 !important;
+}
+
+.pgn__dropdown-menu {
+    // Hide Profile Link (matches any href containing /u/)
+    a[href*="/u/"] {
+        display: none!important;
+    }
+
+    // Hide Account Link (matches /account)
+    a[href="/account"], a[href*="/account/"] {
+        display: none!important;
+    }
+
+    // Hide Logout Link (matches /logout)
+    // NOTE: This is the most critical removal
+    a[href*="/logout"] {
+        display: none!important;
+    }
+}
+
+// 2. Target the Legacy LMS (Indigo) Dropdowns
+// Indigo uses Bootstrap 4/5 structures
+.dropdown-menu.user-dropdown-menu, // Specific to some implementations
+.nav-item.dropdown-menu {         // Generic Bootstrap navbar dropdown
+
+    // We scope this strictly to the user menu to avoid hiding links in courseware
+    // Usually the user menu is the last item or has a specific ID
+
+    .dropdown-item[href*="/u/"] {
+        display: none!important;
+    }
+
+    .dropdown-item[href*="/account"] {
+        display: none!important;
+    }
+
+    .dropdown-item[href*="/logout"] {
+        display: none!important;
+    }
+}
+
+
 @import "./header";
 @import "./footer";
 @import "./login";
